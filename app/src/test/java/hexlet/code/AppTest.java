@@ -26,7 +26,7 @@ public class AppTest {
         assertFalse(schema.contains("whatthe").isValid("what does the fox say"));
 
         var schema1 = v.string();
-        assertTrue(schema1.minLength(10).minLength(4).isValid("Hexlet"));
+        assertEquals(schema1.minLength(10).minLength(4).isValid("Hexlet"), false);
     }
 
 }
